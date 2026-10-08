@@ -110,7 +110,7 @@ export function Registration() {
               className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-[var(--primary)]/25 blur-3xl"
             />
             <div className="absolute -bottom-32 -left-24 h-72 w-72 rounded-full bg-[var(--primary)]/10 blur-3xl" />
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.035)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_at_85%_10%,black,transparent_60%)]" />
+            
           </div>
 
           <div className="relative grid gap-12 lg:grid-cols-[1.05fr_.95fr] lg:gap-14">
@@ -168,38 +168,7 @@ export function Registration() {
                 ))}
               </motion.ul>
 
-              <motion.div variants={rise} className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <motion.a
-                  href={reg.formUrl}
-                  whileTap={{ scale: 0.97 }}
-                  className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-[var(--primary)] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_12px_32px_-12px_var(--primary)] transition-colors hover:bg-[var(--primary-light)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-light)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface)]"
-                >
-                  <span
-                    aria-hidden
-                    className="absolute inset-y-0 -left-1/3 w-1/3 -skew-x-12 bg-white/25 opacity-0 transition-all duration-700 group-hover:left-full group-hover:opacity-100 motion-reduce:hidden"
-                  />
-                  <span className="relative">Register now</span>
-                  <ArrowUpRight
-                    size={17}
-                    className="relative transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                  />
-                </motion.a>
-
-                <motion.a
-                  href={PAYMENT_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileTap={{ scale: 0.97 }}
-                  className="group inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-white/80 backdrop-blur transition hover:border-white/30 hover:bg-white/[0.07] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-                >
-                  Open payment portal
-                  <ArrowUpRight
-                    size={16}
-                    className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                  />
-                  <span className="sr-only">(opens in a new tab)</span>
-                </motion.a>
-              </motion.div>
+           
 
               <motion.p variants={rise} className="mt-5 flex items-center gap-2.5 text-sm text-white/55">
                 <span className="relative flex h-2 w-2">

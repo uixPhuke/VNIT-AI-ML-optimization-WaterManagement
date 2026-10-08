@@ -4,13 +4,17 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { eventData } from "@/lib/event-data";
 import { Reveal } from "@/components/ui/reveal";
+import { Layers } from "lucide-react";
 
 export function KeyTopics() {
   return (
     <section id="topics" className="py-24 sm:py-32">
       <div className="container">
         <Reveal>
-          <p className="text-xs uppercase tracking-[0.22em] text-[var(--primary-light)]">02 / Key Topics</p>
+           <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] py-1.5 pl-2.5 pr-4 text-xs font-medium text-white/70 backdrop-blur">
+            <Layers size={14} className="text-[var(--primary-light)]" />
+            Key topics
+          </p>
           <h2 className="mt-5 max-w-3xl text-4xl font-semibold tracking-tight sm:text-6xl">Seven areas shaping the conversation.</h2>
         </Reveal>
         <div className="mt-14 border-t border-white/10">

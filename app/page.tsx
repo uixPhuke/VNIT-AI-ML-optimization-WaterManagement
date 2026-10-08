@@ -19,12 +19,12 @@ export default function Home() {
       <main>
         <HeroSection />
         <WorkshopOverview />
-        <WorkshopDetails />
+       
         <KeyTopics />
         <Audience />
         <Speakers />
         <Registration />
-        <ApplicationProcess />
+      
         <ImportantNotes />
         <Organizers />
         <Contact />
