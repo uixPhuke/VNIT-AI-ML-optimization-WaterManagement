@@ -1,0 +1,32 @@
+"use client";
+
+import { useState } from "react";
+import { Menu } from "lucide-react";
+import { MobileMenu } from "./mobile-menu";
+import { navigation } from "@/lib/navigation";
+
+export function Navbar() {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur-xl">
+        <div className="container flex h-16 items-center justify-between">
+          <a href="#" className="font-semibold tracking-tight">
+            VNIT <span className="text-[var(--primary-light)]">×</span> AI
+          </a>
+          <nav className="hidden items-center gap-7 md:flex">
+            {navigation.map((item) => (
+              <a key={item.href} href={item.href} className="text-sm text-white/60 transition hover:text-white">
+                {item.label}
+              </a>
+            ))}
+          </nav>
+          <button onClick={() => setOpen(true)} className="rounded-lg border border-white/10 p-2 md:hidden" aria-label="Open menu">
+            <Menu size={20} />
+          </button>
+        </div>
+      </header>
+      <MobileMenu open={open} onClose={() => setOpen(false)} />
+    </>
+  );
+}
